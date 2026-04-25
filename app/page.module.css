@@ -1,0 +1,58 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 4rem 5vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─── Nameplate ──────────────────────────────────────────────────── */
+.nameplate {
+  margin-top: 20vh;
+}
+
+.name {
+  font-size: var(--type-2xl);
+  font-weight: var(--weight-extralight);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--color-fg);
+}
+
+.descriptor {
+  margin-top: 1rem;
+  font-size: var(--type-lg);
+  font-weight: var(--weight-extralight);
+  color: var(--color-muted);
+  letter-spacing: 0.01em;
+}
+
+/* ─── Footer ─────────────────────────────────────────────────────── */
+.footer {
+  font-size: var(--type-sm);
+  font-weight: var(--weight-light);
+  color: var(--color-muted);
+}
+
+.footer a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.footer a:hover {
+  color: var(--color-fg);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .name {
+    font-size: var(--type-xl);
+  }
+
+  .nameplate {
+    margin-top: 12vh;
+  }
+}
