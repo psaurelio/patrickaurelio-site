@@ -1,6 +1,6 @@
 /* ─── Design tokens ─────────────────────────────────────────────── */
 :root {
-  --color-bg:         #f7f5f2;   /* warm off-white — not corporate, not cold */
+  --color-bg:         #fafaf8;   /* near-white, whisper of warmth */
   --color-fg:         #1a1a18;   /* near-black, softer than pure */
   --color-muted:      #6b6b67;   /* secondary text, nav inactive */
   --color-accent:     #1a1a18;   /* nav underline, hover; same as fg for now */
