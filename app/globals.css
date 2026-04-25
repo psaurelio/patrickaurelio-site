@@ -20,7 +20,9 @@
   --space-base:       1.5rem;
   --space-section:    6rem;
 
-  --measure:          68ch;       /* max line length for readability */
+  --measure:          80ch;       /* max line length for readability */
+  --container:        900px;      /* single-column content width */
+  --nav-height:       52px;
 }
 
 /* ─── Reset ─────────────────────────────────────────────────────── */
@@ -34,16 +36,18 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 32px);
   height: 100%;
 }
 
 body {
   font-family:             var(--font-sans);
-  font-weight:             var(--weight-light);
+  font-weight:             var(--weight-extralight);
   font-size:               var(--type-base);
   line-height:             1.65;
   color:                   var(--color-fg);
   background-color:        var(--color-bg);
+  text-rendering:          optimizeLegibility;
   -webkit-font-smoothing:  antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x:              hidden;
