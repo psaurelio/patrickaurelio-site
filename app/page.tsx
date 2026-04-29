@@ -15,6 +15,11 @@ const NAV = [
 
 export default function Home() {
   const [active, setActive] = useState("about");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
 
   useEffect(() => {
     const els = NAV.map(({ id }) => document.getElementById(id)).filter(Boolean) as HTMLElement[];
@@ -44,6 +49,13 @@ export default function Home() {
               {label}
             </a>
           ))}
+          <button
+            className={styles.themeToggle}
+            onClick={() => setTheme(t => t === "light" ? "dark" : "light")}
+            aria-label="Toggle dark mode"
+          >
+            {theme === "light" ? "Dark" : "Light"}
+          </button>
         </div>
       </nav>
 
@@ -54,7 +66,17 @@ export default function Home() {
             <div className={styles.heroTop}>
               <div className={styles.heroNames}>
                 <h1 className={styles.name}>Patrick Aurelio</h1>
-                <p className={styles.role}>Senior Product Designer &amp; Product Manager</p>
+                <p className={styles.role}>Product Leadership | Product Design | 4x TEC Award-Winning Products </p>
+                <p className={styles.summary}>
+              Innovative product professional with 12+ years shaping
+              award-winning software and hardware products. Expert in end-to-end product lifecycle
+              leadership, from strategy, roadmap planning, and backlog orchestration to hands-on UX
+              design leadership and technical collaboration with DSP / algorithm engineers. Known for
+              driving industry-recognized launches and delivering user-centric workflows validated through rigorous user
+              research. Adept at balancing feature innovation with technical debt and platform
+              stability while influencing cross-functional stakeholders across design, engineering,
+              and GTM teams.
+            </p>
               </div>
               <Image
                 src="/images/headshot_11-2026.jpeg"
@@ -65,18 +87,94 @@ export default function Home() {
                 priority
               />
             </div>
-            <p className={styles.summary}>
-              Innovative Senior Product Designer and Product Manager with 12+ years shaping
-              award-winning software and hardware products. Expert in end-to-end product lifecycle
-              leadership, from strategy, roadmap planning, and backlog orchestration to hands-on UX
-              design leadership and technical collaboration with DSP / algorithm engineers. Known for
-              driving industry-recognized launches, elevating sound quality through deep technical
-              partnerships, and delivering user-centric workflows validated through rigorous user
-              research. Adept at balancing feature innovation with technical debt and platform
-              stability while influencing cross-functional stakeholders across design, engineering,
-              and GTM teams.
-            </p>
+            
           </div>
+                 {/* ─── Selected Work ────────────────────────────────── */}
+        <section id="work" className={styles.section}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionHeader}>Selected Work</h2>
+            <hr className={styles.rule} />
+
+            <div className={styles.workItems}>
+
+              <div className={styles.workItemFeatured}>
+                <h3 className={styles.workTitle}>Opal Morphing Synthesizer</h3>
+                <p className={styles.workMeta}>Universal Audio · TEC Award 2023 · Musical Instrument Software</p>
+                <div className={styles.videoWrap}>
+                  <iframe
+                    src="https://www.youtube.com/embed/Jx7lQ7N9jYk"
+                    title="Opal Morphing Synthesizer Trailer"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+
+              <div className={styles.workItem}>
+                <div className={styles.workImageWrap}>
+                  <Image
+                    src="/images/products/apollo-twin.png"
+                    alt="Apollo Twin"
+                    width={140}
+                    height={100}
+                    className={styles.workImage}
+                  />
+                </div>
+                <div className={styles.workInfo}>
+                  <h3 className={styles.workTitle}>Apollo Twin</h3>
+                  <p className={styles.workMeta}>Universal Audio · TEC Awards 2015 &amp; 2017 · Computer Audio Hardware</p>
+                  <p className={styles.workDescription}>
+                    Expansion of the Apollo line to the high-TAM prosumer segment. Two consecutive
+                    TEC Awards for Computer Audio Hardware.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.workItem}>
+                <div className={styles.workImageWrap}>
+                  <Image
+                    src="/images/products/apollo-16.png"
+                    alt="Apollo 16"
+                    width={140}
+                    height={100}
+                    className={styles.workImage}
+                  />
+                </div>
+                <div className={styles.workInfo}>
+                  <h3 className={styles.workTitle}>Apollo 16</h3>
+                  <p className={styles.workMeta}>Universal Audio · TEC Award 2014 · Computer Audio Hardware</p>
+                  <p className={styles.workDescription}>
+                    Flagship audio ecosystem scaling to 64-channel high-end B2B solutions.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <div className={styles.awardsBlock}>
+              <p className={styles.awardsLabel}>Industry Awards</p>
+              <div className={styles.awardsList}>
+                <div className={styles.awardRow}>
+                  <span className={styles.awardYear}>2023</span>
+                  <span>TEC Award — Opal Morphing Synthesizer · Musical Instrument Software</span>
+                </div>
+                <div className={styles.awardRow}>
+                  <span className={styles.awardYear}>2017</span>
+                  <span>TEC Award — Apollo Twin USB · Computer Audio Hardware</span>
+                </div>
+                <div className={styles.awardRow}>
+                  <span className={styles.awardYear}>2015</span>
+                  <span>TEC Award — Apollo Twin · Computer Audio Hardware</span>
+                </div>
+                <div className={styles.awardRow}>
+                  <span className={styles.awardYear}>2014</span>
+                  <span>TEC Award — Apollo 16 · Computer Audio Hardware</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
         </section>
 
         {/* ─── Experience ───────────────────────────────────── */}
@@ -163,99 +261,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ─── Selected Work ────────────────────────────────── */}
-        <section id="work" className={styles.section}>
-          <div className={styles.container}>
-            <h2 className={styles.sectionHeader}>Selected Work</h2>
-            <hr className={styles.rule} />
-
-            <div className={styles.workItems}>
-
-              <div className={styles.workItem}>
-                <div className={styles.workImageWrap}>
-                  <Image
-                    src="/images/products/opal-full.png"
-                    alt="Opal Morphing Synthesizer"
-                    width={140}
-                    height={100}
-                    className={styles.workImage}
-                  />
-                </div>
-                <div className={styles.workInfo}>
-                  <h3 className={styles.workTitle}>Opal Morphing Synthesizer</h3>
-                  <p className={styles.workMeta}>Universal Audio · TEC Award 2023 · Musical Instrument Software</p>
-                  <p className={styles.workDescription}>
-                    Award-winning virtual synthesizer. TEC Award for Outstanding Technical
-                    Achievement in Musical Instrument Technology.
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.workItem}>
-                <div className={styles.workImageWrap}>
-                  <Image
-                    src="/images/products/apollo-twin.png"
-                    alt="Apollo Twin"
-                    width={140}
-                    height={100}
-                    className={styles.workImage}
-                  />
-                </div>
-                <div className={styles.workInfo}>
-                  <h3 className={styles.workTitle}>Apollo Twin</h3>
-                  <p className={styles.workMeta}>Universal Audio · TEC Awards 2015 &amp; 2017 · Computer Audio Hardware</p>
-                  <p className={styles.workDescription}>
-                    Expansion of the Apollo line to the high-TAM prosumer segment. Two consecutive
-                    TEC Awards for Computer Audio Hardware.
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.workItem}>
-                <div className={styles.workImageWrap}>
-                  <Image
-                    src="/images/products/apollo-16.png"
-                    alt="Apollo 16"
-                    width={140}
-                    height={100}
-                    className={styles.workImage}
-                  />
-                </div>
-                <div className={styles.workInfo}>
-                  <h3 className={styles.workTitle}>Apollo 16</h3>
-                  <p className={styles.workMeta}>Universal Audio · TEC Award 2014 · Computer Audio Hardware</p>
-                  <p className={styles.workDescription}>
-                    Flagship audio ecosystem scaling to 64-channel high-end B2B solutions.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-
-            <div className={styles.awardsBlock}>
-              <p className={styles.awardsLabel}>Industry Awards</p>
-              <div className={styles.awardsList}>
-                <div className={styles.awardRow}>
-                  <span className={styles.awardYear}>2023</span>
-                  <span>TEC Award — Opal Morphing Synthesizer · Musical Instrument Software</span>
-                </div>
-                <div className={styles.awardRow}>
-                  <span className={styles.awardYear}>2017</span>
-                  <span>TEC Award — Apollo Twin USB · Computer Audio Hardware</span>
-                </div>
-                <div className={styles.awardRow}>
-                  <span className={styles.awardYear}>2015</span>
-                  <span>TEC Award — Apollo Twin · Computer Audio Hardware</span>
-                </div>
-                <div className={styles.awardRow}>
-                  <span className={styles.awardYear}>2014</span>
-                  <span>TEC Award — Apollo 16 · Computer Audio Hardware</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
+ 
 
         {/* ─── Skills ───────────────────────────────────────── */}
         <section id="skills" className={styles.section}>

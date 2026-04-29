@@ -1,6 +1,6 @@
 /* ─── Design tokens ─────────────────────────────────────────────── */
 :root {
-  --color-bg:         #ffffff;
+  --color-bg:         #fffcff;
   --color-fg:         #1a1a18;   /* near-black, softer than pure */
   --color-muted:      #6b6b67;   /* secondary text, nav inactive */
   --color-accent:     #1a1a18;   /* nav underline, hover; same as fg for now */
@@ -21,8 +21,16 @@
   --space-section:    6rem;
 
   --measure:          80ch;       /* max line length for readability */
-  --container:        900px;      /* single-column content width */
+  --container:        1180px;      /* single-column content width */
   --nav-height:       52px;
+}
+
+/* ─── Dark mode ─────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --color-bg:     #1a1a18;
+  --color-fg:     #f0efeb;
+  --color-muted:  #8a8a86;
+  --color-accent: #f0efeb;
 }
 
 /* ─── Reset ─────────────────────────────────────────────────────── */
