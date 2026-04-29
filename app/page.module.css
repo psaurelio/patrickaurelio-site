@@ -83,7 +83,7 @@
 
 .rule {
   border: none;
-  border-top: 1px solid rgba(26, 26, 24, 0.12);
+  border-top: 1px solid var(--color-rule);
   margin-bottom: 48px;
 }
 
@@ -191,7 +191,7 @@
 .arcCredentials {
   margin-top: 48px;
   padding-top: 36px;
-  border-top: 1px solid rgba(26, 26, 24, 0.12);
+  border-top: 1px solid var(--color-rule);
 }
 
 .arcCredentialsLabel {
@@ -293,7 +293,7 @@
 
 .awardsBlock {
   padding-top: 40px;
-  border-top: 1px solid rgba(26, 26, 24, 0.12);
+  border-top: 1px solid var(--color-rule);
 }
 
 .awardsLabel {
@@ -400,7 +400,7 @@
   font-weight: var(--weight-extralight);
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: rgba(26, 26, 24, 0.2);
+  text-decoration-color: var(--color-rule);
   transition: text-decoration-color 0.18s ease;
 }
 
@@ -411,7 +411,7 @@
 /* ─── Footer ─────────────────────────────────────────────────────── */
 .footer {
   padding: 32px 0 48px;
-  border-top: 1px solid rgba(26, 26, 24, 0.12);
+  border-top: 1px solid var(--color-rule);
 }
 
 .footerInner {

@@ -4,6 +4,7 @@
   --color-fg:         #1a1a18;   /* near-black, softer than pure */
   --color-muted:      #6b6b67;   /* secondary text, nav inactive */
   --color-accent:     #1a1a18;   /* nav underline, hover; same as fg for now */
+  --color-rule:       rgba(26, 26, 24, 0.12);
 
   --font-sans:        var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
 
@@ -31,6 +32,7 @@
   --color-fg:     #f0efeb;
   --color-muted:  #8a8a86;
   --color-accent: #f0efeb;
+  --color-rule:   var(--color-fg);
 }
 
 /* ─── Reset ─────────────────────────────────────────────────────── */
