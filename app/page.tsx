@@ -98,8 +98,7 @@ export default function Home() {
             <div className={styles.workItems}>
 
               <div className={styles.workItemFeatured}>
-                <h3 className={styles.workTitle}>Opal Morphing Synthesizer</h3>
-                <p className={styles.workMeta}>Universal Audio · TEC Award 2023 · Musical Instrument Software</p>
+                <p className={styles.workTitle}>Opal Morphing Synthesizer — Universal Audio · TEC Award 2023 · Musical Instrument Software</p>
                 <div className={styles.videoWrap}>
                   <iframe
                     src="https://www.youtube.com/embed/Jx7lQ7N9jYk"
@@ -115,8 +114,8 @@ export default function Home() {
                   <Image
                     src="/images/products/apollo-twin.png"
                     alt="Apollo Twin"
-                    width={140}
-                    height={100}
+                    width={560}
+                    height={400}
                     className={styles.workImage}
                   />
                 </div>
@@ -135,8 +134,8 @@ export default function Home() {
                   <Image
                     src="/images/products/apollo-16.png"
                     alt="Apollo 16"
-                    width={140}
-                    height={100}
+                    width={560}
+                    height={400}
                     className={styles.workImage}
                   />
                 </div>
