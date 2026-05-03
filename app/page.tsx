@@ -6,8 +6,8 @@ import styles from "./page.module.css";
 
 const NAV = [
   { id: "about",       label: "About"       },
-  { id: "experience",  label: "Experience"  },
   { id: "work",        label: "Work"        },
+  { id: "experience",  label: "Experience"  },
   { id: "skills",      label: "Skills"      },
   { id: "credentials", label: "Credentials" },
   { id: "contact",     label: "Contact"     },
