@@ -4,13 +4,15 @@
 
 ---
 
-## Purpose
+## Background and Goals
 
-This site is counter-narrative infrastructure. Its job is to establish an independent read of who this person is before any warm introduction, secondhand account, or categorical assumption does it first.
+Client (Patrick Aurelio) exploring/orchestrating a career pivot. He is a generalist who's vibrant skillset and mindset should be highly desirable in the workplace. However, his value does not cleanly fit into a specific mold. Therefore, the conventional communication tools of resume, linkedin profile, etc. fall short. The site will use 
 
-It is not a résumé. It is not a portfolio in the traditional sense. It is an argument — made through design, restraint, and demonstrated thinking — for a specific kind of value that cannot be compressed into bullet points.
+According to many sources, employers want to see outcomes based on hard numerical metrics. The client spent the last 5 years working on a product line that was critically acclaimed. However, the line under-performed due mostly to lack of company alignment: in other words, circumstances outside of their control. The client is a generalist, who's last five years typecast them as a niche specialist. The "generalist" aspect is proven over the longer timeline, and two careers. The second (tech) career of almost two decades includes hardware, software, and platform, and has earned four global awards. The first career (17 years) is that of a creative pro and performer (DJ). the full career arc is ecclectic to an extreme. However, it's also a long arc. Age discrimination in the workplace starts at 40, and the client is 61. The client needs another 10 years of advancement, rather than "sunsetting".
 
-**The conversion does not happen here.** This site generates curiosity and establishes credibility. The next conversation closes the deal.
+The goal of this web site is to present a first impression of the unique value that the client brings to future employers... One based more on the future than the past. It is an argument — made through design, demonstrated thinking, and the trending paradigm of "micro-projects" — for a specific kind of value that cannot be compressed into bullet points.
+
+**The conversion does not need to happen directly from here.** This site generates curiosity and establishes credibility. The next conversation closes the deal.
 
 ---
 

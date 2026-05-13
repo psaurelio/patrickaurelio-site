@@ -28,8 +28,8 @@
 }
 
 .navLink {
-  font-size: var(--type-sm);
-  font-weight: var(--weight-extralight);
+  font-size: var(--type-base);
+  font-weight: var(--weight-medium);
   letter-spacing: 0.03em;
   color: var(--color-muted);
   text-decoration: underline;
@@ -104,8 +104,8 @@
 }
 
 .headshot {
-  width: 300px;
-  height: 300px;
+  width: 360px;
+  height: 360px;
   border-radius: 10%;
   object-fit: cover;
   object-position: center top;
@@ -115,27 +115,38 @@
 
 .name {
   font-size: var(--type-2xl);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-extralight);
   letter-spacing: -0.02em;
   line-height: 1.1;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 .role {
   font-size: var(--type-lg);
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-extrabold);
+  text-align: justify;
   line-height: 1.3;
-  margin-bottom: 28px;
+  margin-bottom: 12px;
 }
 
 .summary {
   max-width: var(--measure);
   font-size: var(--type-base);
-  font-weight: var(--weight-extralight);
+  font-weight: var(--weight-light);
   line-height: 1.65;
+  text-align: justify;
   color: var(--color-fg);
+  margin-bottom: 0px;
 }
 
+.availability {
+  margin-top: 12px;
+  font-size: var(--type-lg);
+  font-weight: var(--weight-regular);
+  text-align: justify;
+  line-height: 1.3;
+  margin-bottom: 0px;
+}
 /* ─── How I Think ────────────────────────────────────────────────── */
 .thinkingItems {
   display: flex;
@@ -154,18 +165,18 @@
   margin-bottom: 10px;
 }
 
-/* ─── The Arc ────────────────────────────────────────────────────── */
-.arcItems {
+/* ─── Experience ─────────────────────────────────────────────────── */
+.expItems {
   display: flex;
   flex-direction: column;
   gap: 36px;
 }
 
-.arcItem {
+.expItem {
   max-width: var(--measure);
 }
 
-.arcRole {
+.expRole {
   display: block;
   font-size: var(--type-base);
   font-weight: var(--weight-regular);
@@ -173,7 +184,7 @@
   margin-bottom: 2px;
 }
 
-.arcOrg {
+.expOrg {
   display: block;
   font-size: var(--type-sm);
   font-weight: var(--weight-extralight);
@@ -181,19 +192,19 @@
   margin-bottom: 10px;
 }
 
-.arcDescription {
+.expDescription {
   font-size: var(--type-base);
   font-weight: var(--weight-extralight);
   line-height: 1.65;
 }
 
-.arcCredentials {
+.expCredentials {
   margin-top: 48px;
   padding-top: 36px;
   border-top: 1px solid var(--color-rule);
 }
 
-.arcCredentialsLabel {
+.expCredentialsLabel {
   font-size: var(--type-sm);
   font-weight: var(--weight-extralight);
   letter-spacing: 0.12em;
@@ -202,7 +213,7 @@
   margin-bottom: 20px;
 }
 
-.arcCredentialsList {
+.expCredentialsList {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -215,37 +226,45 @@
 }
 
 /* ─── Selected Work ──────────────────────────────────────────────── */
-.workItems {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
+.workGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
   margin-bottom: 56px;
 }
 
-.workItem {
-  display: flex;
-  gap: 28px;
-  align-items: flex-start;
-}
-
-.workItemFeatured {
+.workGridItem {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 100%;
+  gap: 12px;
 }
 
 .workImageWrap {
-  flex: 1;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--color-bg);
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.workVideoWrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.workVideo {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 .workImage {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
 }
 

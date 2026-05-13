@@ -65,8 +65,8 @@ export default function Home() {
           <div className={styles.container}>
             <div className={styles.heroTop}>
               <div className={styles.heroNames}>
-                <h1 className={styles.name}>Patrick Aurelio</h1>
-                <p className={styles.role}>Product Leadership | Product Design | 4x TEC Award-Winning Products </p>
+                <h1 className={styles.name}>PATRICK AURELIO</h1>
+                <p className={styles.role}>PRODUCT LEADERSHIP | PRODUCT DESIGN | 4x TEC AWARD-WINNING PRODUCTS </p>
                 <p className={styles.summary}>
               Innovative product professional with 12+ years shaping
               award-winning software and hardware products. Expert in end-to-end product lifecycle
@@ -76,12 +76,13 @@ export default function Home() {
               research. Adept at balancing feature innovation with technical debt and platform
               stability while influencing cross-functional stakeholders across design, engineering,
               and GTM teams.
+              <p className={styles.availability}>Available For: Employment | Long and Short-term Contracts | Consulting. </p>
             </p>
               </div>
               <Image
                 src="/images/headshot_11-2026.jpeg"
                 alt="Patrick Aurelio"
-                width={300}
+                width={360}
                 height={360}
                 className={styles.headshot}
                 priority
@@ -92,60 +93,53 @@ export default function Home() {
                  {/* ─── Selected Work ────────────────────────────────── */}
         <section id="work" className={styles.section}>
           <div className={styles.container}>
-            <h2 className={styles.sectionHeader}>Selected Work</h2>
+            <h2 className={styles.sectionHeader}>SELECTED WORK</h2>
             <hr className={styles.rule} />
 
-            <div className={styles.workItems}>
+            <div className={styles.workGrid}>
 
-              <div className={styles.workItemFeatured}>
-                <p className={styles.workTitle}>Opal Morphing Synthesizer — Universal Audio · TEC Award 2023 · Musical Instrument Software</p>
-                <div className={styles.videoWrap}>
+              <div className={styles.workGridItem}>
+                <div className={styles.workVideoWrap}>
                   <iframe
                     src="https://www.youtube.com/embed/Jx7lQ7N9jYk"
-                    title="Opal Morphing Synthesizer Trailer"
+                    title="Opal Morphing Synthesizer"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
+                    className={styles.workVideo}
                   />
                 </div>
+                <h3 className={styles.workTitle}>Opal Morphing Synthesizer</h3>
+                <p className={styles.workMeta}>Universal Audio · TEC Award 2023 · Musical Instrument Software</p>
               </div>
 
-              <div className={styles.workItem}>
+              <div className={styles.workGridItem}>
                 <div className={styles.workImageWrap}>
-                  <Image
-                    src="/images/products/apollo-twin.png"
-                    alt="Apollo Twin"
-                    width={560}
-                    height={400}
-                    className={styles.workImage}
-                  />
+                  <Image src="/images/products/apollo-twin.png" alt="Apollo Twin" width={560} height={420} className={styles.workImage} />
                 </div>
-                <div className={styles.workInfo}>
-                  <h3 className={styles.workTitle}>Apollo Twin</h3>
-                  <p className={styles.workMeta}>Universal Audio · TEC Awards 2015 &amp; 2017 · Computer Audio Hardware</p>
-                  <p className={styles.workDescription}>
-                    Expansion of the Apollo line to the high-TAM prosumer segment. Two consecutive
-                    TEC Awards for Computer Audio Hardware.
-                  </p>
-                </div>
+                <h3 className={styles.workTitle}>Apollo Twin</h3>
+                <p className={styles.workMeta}>Universal Audio · TEC Awards 2015 &amp; 2017 · Computer Audio Hardware</p>
               </div>
 
-              <div className={styles.workItem}>
+              <div className={styles.workGridItem}>
                 <div className={styles.workImageWrap}>
-                  <Image
-                    src="/images/products/apollo-16.png"
-                    alt="Apollo 16"
-                    width={560}
-                    height={400}
-                    className={styles.workImage}
+                  <Image src="/images/products/apollo-16.png" alt="Apollo 16" width={560} height={420} className={styles.workImage} />
+                </div>
+                <h3 className={styles.workTitle}>Apollo 16</h3>
+                <p className={styles.workMeta}>Universal Audio · TEC Award 2014 · Computer Audio Hardware</p>
+              </div>
+
+              <div className={styles.workGridItem}>
+                <div className={styles.workVideoWrap}>
+                  <iframe
+                    src="https://www.youtube.com/embed/a8WPzhw5_AY"
+                    title="Minimoog Model D"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className={styles.workVideo}
                   />
                 </div>
-                <div className={styles.workInfo}>
-                  <h3 className={styles.workTitle}>Apollo 16</h3>
-                  <p className={styles.workMeta}>Universal Audio · TEC Award 2014 · Computer Audio Hardware</p>
-                  <p className={styles.workDescription}>
-                    Flagship audio ecosystem scaling to 64-channel high-end B2B solutions.
-                  </p>
-                </div>
+                <h3 className={styles.workTitle}>Minimoog Model D</h3>
+                <p className={styles.workMeta}>Universal Audio · Musical Instrument Software</p>
               </div>
 
             </div>
@@ -181,12 +175,12 @@ export default function Home() {
           <div className={styles.container}>
             <h2 className={styles.sectionHeader}>Experience</h2>
             <hr className={styles.rule} />
-            <div className={styles.arcItems}>
+            <div className={styles.expItems}>
 
-              <div className={styles.arcItem}>
-                <span className={styles.arcRole}>Senior Product Designer, Platform &amp; Console Application</span>
-                <span className={styles.arcOrg}>Universal Audio · Scotts Valley, CA (Remote) · 2025</span>
-                <p className={styles.arcDescription}>
+              <div className={styles.expItem}>
+                <span className={styles.expRole}>Senior Product Designer, Platform &amp; Console Application</span>
+                <span className={styles.expOrg}>Universal Audio · Scotts Valley, CA (Remote) · 2025</span>
+                <p className={styles.expDescription}>
                   Navigated competing platform priorities across a portfolio spanning multiple market
                   segments. Owned design direction and roadmap for UA&apos;s Console application — the
                   primary interface through which users manage Apollo hardware, DSP routing, and
@@ -197,10 +191,10 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className={styles.arcItem}>
-                <span className={styles.arcRole}>Senior Product Designer, Software Instruments</span>
-                <span className={styles.arcOrg}>Universal Audio · Scotts Valley, CA (Remote) · 2020–2025</span>
-                <p className={styles.arcDescription}>
+              <div className={styles.expItem}>
+                <span className={styles.expRole}>Senior Product Designer, Software Instruments</span>
+                <span className={styles.expOrg}>Universal Audio · Scotts Valley, CA (Remote) · 2020–2025</span>
+                <p className={styles.expDescription}>
                   Shipped award-winning virtual instruments including Opal Morphing Synthesizer:
                   TEC Award for Outstanding Technical Achievement in Musical Instrument Technology
                   (2023). Translated user research and product vision into feature priorities across
@@ -209,10 +203,10 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className={styles.arcItem}>
-                <span className={styles.arcRole}>Product Manager, Software Instruments &amp; Platform</span>
-                <span className={styles.arcOrg}>Universal Audio · Scotts Valley, CA (Remote) · 2016–2020</span>
-                <p className={styles.arcDescription}>
+              <div className={styles.expItem}>
+                <span className={styles.expRole}>Product Manager, Software Instruments &amp; Platform</span>
+                <span className={styles.expOrg}>Universal Audio · Scotts Valley, CA (Remote) · 2016–2020</span>
+                <p className={styles.expDescription}>
                   Owned platform incubation work that made future instruments faster to ship,
                   identifying reusable architecture, defining requirements, and holding the
                   engineering investment against short-term feature pressure. Shipped Minimoog
@@ -222,10 +216,10 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className={styles.arcItem}>
-                <span className={styles.arcRole}>Product Manager, Hardware (Audio Interfaces)</span>
-                <span className={styles.arcOrg}>Universal Audio · Scotts Valley, CA · 2012–2016</span>
-                <p className={styles.arcDescription}>
+              <div className={styles.expItem}>
+                <span className={styles.expRole}>Product Manager, Hardware (Audio Interfaces)</span>
+                <span className={styles.expOrg}>Universal Audio · Scotts Valley, CA · 2012–2016</span>
+                <p className={styles.expDescription}>
                   Drove upmarket and downmarket expansion of the Apollo interface line: managing
                   end-to-end product launch across physical product development, market positioning,
                   and platform coherence across segments with different customer models, price
@@ -234,20 +228,20 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className={styles.arcItem}>
-                <span className={styles.arcRole}>Product Designer, Keyboards &amp; MIDI Controllers</span>
-                <span className={styles.arcOrg}>Avid / M-Audio · Irwindale, CA · 2011–2012</span>
-                <p className={styles.arcDescription}>
+              <div className={styles.expItem}>
+                <span className={styles.expRole}>Product Designer, Keyboards &amp; MIDI Controllers</span>
+                <span className={styles.expOrg}>Avid / M-Audio · Irwindale, CA · 2011–2012</span>
+                <p className={styles.expDescription}>
                   Held product ownership across M-Audio&apos;s full MIDI controller line, coordinating
                   with international development teams across hardware development cycles. Defined
                   initial specifications for the Axiom AIR series.
                 </p>
               </div>
 
-              <div className={styles.arcItem}>
-                <span className={styles.arcRole}>Creative Professional: Music</span>
-                <span className={styles.arcOrg}>Patrick Scott</span>
-                <p className={styles.arcDescription}>
+              <div className={styles.expItem}>
+                <span className={styles.expRole}>Creative Professional: Music</span>
+                <span className={styles.expOrg}>Patrick Scott</span>
+                <p className={styles.expDescription}>
                   Built and maintained a full-time professional DJ and production career lasting
                   more than a decade, navigating quickly shifting music trends. Authored and
                   produced original compositions licensed by premier global labels, achieving

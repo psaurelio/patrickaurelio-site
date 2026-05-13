@@ -6,7 +6,7 @@
   --color-accent:     #1a1a18;   /* nav underline, hover; same as fg for now */
   --color-rule:       rgba(26, 26, 24, 0.12);
 
-  --font-sans:        var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+  --font-sans:        var(--font-nunito), 'Nunito', sans-serif;
 
   --type-base:        1rem;       /* 16px */
   --type-sm:          0.875rem;   /* 14px */
@@ -17,6 +17,11 @@
   --weight-extralight: 200;
   --weight-light:      300;
   --weight-regular:    400;
+ --weight-medium:      500;
+  --weight-semibold:   600;
+  --weight-bold:       700;
+  --weight-extrabold:  800;
+  
 
   --space-base:       1.5rem;
   --space-section:    6rem;
