@@ -242,7 +242,7 @@
 .workImageWrap {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: var(--color-bg);
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;

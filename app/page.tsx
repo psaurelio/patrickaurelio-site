@@ -15,7 +15,7 @@ const NAV = [
 
 export default function Home() {
   const [active, setActive] = useState("about");
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -131,14 +131,14 @@ export default function Home() {
               <div className={styles.workGridItem}>
                 <div className={styles.workVideoWrap}>
                   <iframe
-                    src="https://www.youtube.com/embed/a8WPzhw5_AY"
-                    title="Minimoog Model D"
+                    src="https://www.youtube.com/embed/5Ha3PzW59h8"
+                    title="Anthem"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className={styles.workVideo}
                   />
                 </div>
-                <h3 className={styles.workTitle}>Minimoog Model D</h3>
+                <h3 className={styles.workTitle}>Anthem</h3>
                 <p className={styles.workMeta}>Universal Audio · Musical Instrument Software</p>
               </div>
 
