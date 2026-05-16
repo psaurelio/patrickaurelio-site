@@ -82,8 +82,8 @@ export default function Home() {
               <Image
                 src="/images/headshot_11-2026.jpeg"
                 alt="Patrick Aurelio"
-                width={360}
-                height={360}
+                width={280}
+                height={420}
                 className={styles.headshot}
                 priority
               />
@@ -113,19 +113,17 @@ export default function Home() {
               </div>
 
               <div className={styles.workGridItem}>
-                <div className={styles.workImageWrap}>
-                  <Image src="/images/products/apollo-twin.png" alt="Apollo Twin" width={560} height={420} className={styles.workImage} />
+                <div className={styles.workVideoWrap}>
+                  <iframe
+                    src="https://www.youtube.com/embed/1IHLZsK-gsM"
+                    title="Apollo Twin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className={styles.workVideo}
+                  />
                 </div>
                 <h3 className={styles.workTitle}>Apollo Twin</h3>
                 <p className={styles.workMeta}>Universal Audio · TEC Awards 2015 &amp; 2017 · Computer Audio Hardware</p>
-              </div>
-
-              <div className={styles.workGridItem}>
-                <div className={styles.workImageWrap}>
-                  <Image src="/images/products/apollo-16.png" alt="Apollo 16" width={560} height={420} className={styles.workImage} />
-                </div>
-                <h3 className={styles.workTitle}>Apollo 16</h3>
-                <p className={styles.workMeta}>Universal Audio · TEC Award 2014 · Computer Audio Hardware</p>
               </div>
 
               <div className={styles.workGridItem}>
@@ -140,6 +138,20 @@ export default function Home() {
                 </div>
                 <h3 className={styles.workTitle}>Anthem</h3>
                 <p className={styles.workMeta}>Universal Audio · Musical Instrument Software</p>
+              </div>
+
+              <div className={styles.workGridItem}>
+                <div className={styles.workVideoWrap}>
+                  <iframe
+                    src="https://www.youtube.com/embed/uv8z3IAVPto"
+                    title="Apollo 16"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className={styles.workVideo}
+                  />
+                </div>
+                <h3 className={styles.workTitle}>Apollo 16</h3>
+                <p className={styles.workMeta}>Universal Audio · TEC Award 2014 · Computer Audio Hardware</p>
               </div>
 
             </div>
