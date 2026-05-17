@@ -82,7 +82,7 @@ export default function Home() {
               <Image
                 src="/images/headshot_11-2026.jpeg"
                 alt="Patrick Aurelio"
-                width={280}
+                width={420}
                 height={420}
                 className={styles.headshot}
                 priority
