@@ -90,7 +90,7 @@ export default function Home() {
               driving industry-recognized launches and delivering user-centric workflows validated through rigorous user
               research. Adept at balancing feature innovation with technical debt and platform
               stability while influencing cross-functional stakeholders across design, engineering,
-              and GTM teams. Available for Employment, long and short-term Contracts, consulting.
+              and GTM teams. Available for employment, long and short-term contracts, and consulting.
             </p>
               </div>
               <Image
