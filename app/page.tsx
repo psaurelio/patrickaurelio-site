@@ -32,7 +32,20 @@ export default function Home() {
       { rootMargin: "-15% 0px -80% 0px", threshold: 0 }
     );
     els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+
+    const onScroll = () => {
+      if (window.scrollY < 80) {
+        setActive("about");
+      } else if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 80) {
+        setActive("contact");
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   return (
@@ -49,13 +62,14 @@ export default function Home() {
               {label}
             </a>
           ))}
-          <button
-            className={styles.themeToggle}
-            onClick={() => setTheme(t => t === "light" ? "dark" : "light")}
-            aria-label="Toggle dark mode"
+          <a
+            href="/docs/resume-04-2026.docx"
+            download
+            className={styles.navLink}
+            aria-label="Download Résumé"
           >
-            {theme === "light" ? "Dark" : "Light"}
-          </button>
+            Résumé ⤓
+          </a>
         </div>
       </nav>
 
@@ -76,8 +90,8 @@ export default function Home() {
               research. Adept at balancing feature innovation with technical debt and platform
               stability while influencing cross-functional stakeholders across design, engineering,
               and GTM teams.
-              <p className={styles.availability}>Available For: Employment | Long and Short-term Contracts | Consulting. </p>
             </p>
+            <p className={styles.availability}>Available For: Employment | Long and Short-term Contracts | Consulting.</p>
               </div>
               <Image
                 src="/images/headshot_11-2026.jpeg"
@@ -185,7 +199,7 @@ export default function Home() {
         {/* ─── Experience ───────────────────────────────────── */}
         <section id="experience" className={styles.section}>
           <div className={styles.container}>
-            <h2 className={styles.sectionHeader}>Experience</h2>
+            <h2 className={styles.sectionHeader}>EXPERIENCE</h2>
             <hr className={styles.rule} />
             <div className={styles.expItems}>
 
@@ -271,7 +285,7 @@ export default function Home() {
         {/* ─── Skills ───────────────────────────────────────── */}
         <section id="skills" className={styles.section}>
           <div className={styles.container}>
-            <h2 className={styles.sectionHeader}>Skills</h2>
+            <h2 className={styles.sectionHeader}>SKILLS</h2>
             <hr className={styles.rule} />
             <div className={styles.skillsItems}>
 
@@ -302,7 +316,7 @@ export default function Home() {
         {/* ─── Credentials ──────────────────────────────────── */}
         <section id="credentials" className={styles.section}>
           <div className={styles.container}>
-            <h2 className={styles.sectionHeader}>Credentials</h2>
+            <h2 className={styles.sectionHeader}>CREDENTIALS</h2>
             <hr className={styles.rule} />
             <div className={styles.credentialItems}>
 
@@ -333,7 +347,7 @@ export default function Home() {
         {/* ─── Contact ──────────────────────────────────────── */}
         <section id="contact" className={styles.section}>
           <div className={styles.container}>
-            <h2 className={styles.sectionHeader}>Contact</h2>
+            <h2 className={styles.sectionHeader}>CONTACT</h2>
             <hr className={styles.rule} />
             <p className={styles.contactIntro}>
               Open to conversations about the right opportunity.
@@ -365,7 +379,14 @@ export default function Home() {
       {/* ─── Footer ───────────────────────────────────────── */}
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          Patrick Aurelio · Pittsburgh, PA
+          <span>Patrick Aurelio · Pittsburgh, PA</span>
+          <button
+            className={styles.themeToggle}
+            onClick={() => setTheme(t => t === "light" ? "dark" : "light")}
+            aria-label="Toggle dark mode"
+          >
+            {theme === "light" ? "Dark" : "Light"}
+          </button>
         </div>
       </footer>
     </>

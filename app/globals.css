@@ -29,6 +29,22 @@
   --measure:          80ch;       /* max line length for readability */
   --container:        1180px;      /* single-column content width */
   --nav-height:       52px;
+
+  /* ─── Semantic text roles ───────────────────────────────────────── */
+  /* Body copy — long-form paragraph text */
+  --body-size:        var(--type-base);
+  --body-weight:      var(--weight-light);
+  --body-line-height: 1.65;
+
+  /* Labels — item titles (role, work title, credential name) */
+  --label-size:       var(--type-base);
+  --label-weight:     var(--weight-extrabold);
+  --label-line-height: 1.3;
+
+  /* Meta — supporting / secondary text (org, date, category) */
+  --meta-size:        var(--type-sm);
+  --meta-weight:      var(--weight-extralight);
+  --meta-line-height: 1.5;
 }
 
 /* ─── Dark mode ─────────────────────────────────────────────────── */
