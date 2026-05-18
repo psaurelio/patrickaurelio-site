@@ -16,7 +16,7 @@ const NAV = [
 
 export default function Home() {
   const [active, setActive] = useState("about");
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
