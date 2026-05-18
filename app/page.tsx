@@ -64,7 +64,7 @@ export default function Home() {
             </a>
           ))}
           <a
-            href="/docs/resume-04-2026.docx"
+            href="/docs/resume-04-2026.pdf"
             download
             className={styles.navLink}
             aria-label="Download Résumé"
@@ -378,7 +378,7 @@ export default function Home() {
                 linkedin.com/in/patrickaurelio
               </a>
               <a
-                href="/docs/resume-04-2026.docx"
+                href="/docs/resume-04-2026.pdf"
                 download
                 className={styles.contactLink}
               >
