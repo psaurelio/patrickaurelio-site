@@ -7,6 +7,7 @@ import styles from "./page.module.css";
 const NAV = [
   { id: "about",       label: "About"       },
   { id: "work",        label: "Work"        },
+  { id: "awards",      label: "Awards"      },
   { id: "experience",  label: "Experience"  },
   { id: "skills",      label: "Skills"      },
   { id: "credentials", label: "Credentials" },
@@ -15,7 +16,7 @@ const NAV = [
 
 export default function Home() {
   const [active, setActive] = useState("about");
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -80,7 +81,7 @@ export default function Home() {
             <div className={styles.heroTop}>
               <div className={styles.heroNames}>
                 <h1 className={styles.name}>PATRICK AURELIO</h1>
-                <p className={styles.role}>PRODUCT LEADERSHIP | PRODUCT DESIGN | 4x TEC AWARD-WINNING PRODUCTS </p>
+                <p className={styles.role}>PRODUCT LEADERSHIP AND DESIGN | 4x TEC AWARD-WINNING PRODUCTS </p>
                 <p className={styles.summary}>
               Innovative product professional with 12+ years shaping
               award-winning software and hardware products. Expert in end-to-end product lifecycle
@@ -89,15 +90,14 @@ export default function Home() {
               driving industry-recognized launches and delivering user-centric workflows validated through rigorous user
               research. Adept at balancing feature innovation with technical debt and platform
               stability while influencing cross-functional stakeholders across design, engineering,
-              and GTM teams.
+              and GTM teams. Available for Employment, long and short-term Contracts, consulting.
             </p>
-            <p className={styles.availability}>Available For: Employment | Long and Short-term Contracts | Consulting.</p>
               </div>
               <Image
                 src="/images/headshot_11-2026.jpeg"
                 alt="Patrick Aurelio"
-                width={420}
-                height={420}
+                width={312}
+                height={312}
                 className={styles.headshot}
                 priority
               />
@@ -105,10 +105,10 @@ export default function Home() {
             
           </div>
                  {/* ─── Selected Work ────────────────────────────────── */}
-        <section id="work" className={styles.section}>
+        <section id="work" className={`${styles.section} ${styles.sectionRaised}`}>
           <div className={styles.container}>
             <h2 className={styles.sectionHeader}>SELECTED WORK</h2>
-            <hr className={styles.rule} />
+            <hr className={`${styles.rule} ${styles.ruleTight}`} />
 
             <div className={styles.workGrid}>
 
@@ -122,8 +122,8 @@ export default function Home() {
                     className={styles.workVideo}
                   />
                 </div>
-                <h3 className={styles.workTitle}>Opal Morphing Synthesizer</h3>
-                <p className={styles.workMeta}>Universal Audio · TEC Award 2023 · Musical Instrument Software</p>
+                {/* <h3 className={styles.workTitle}>Opal Morphing Synthesizer</h3> */}
+                {/* <p className={styles.workMeta}>Universal Audio · TEC Award 2023 · Musical Instrument Software</p> */}
               </div>
 
               <div className={styles.workGridItem}>
@@ -136,64 +136,68 @@ export default function Home() {
                     className={styles.workVideo}
                   />
                 </div>
-                <h3 className={styles.workTitle}>Apollo Twin</h3>
-                <p className={styles.workMeta}>Universal Audio · TEC Awards 2015 &amp; 2017 · Computer Audio Hardware</p>
+                {/* <h3 className={styles.workTitle}>Apollo Twin Audio Interface</h3> */}
+                {/* <p className={styles.workMeta}>Universal Audio · TEC Awards 2015 &amp; 2017 · Computer Audio Hardware</p> */}
               </div>
 
               <div className={styles.workGridItem}>
                 <div className={styles.workVideoWrap}>
                   <iframe
                     src="https://www.youtube.com/embed/5Ha3PzW59h8"
-                    title="Anthem"
+                    title="Anthem Analog Synthesizer"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className={styles.workVideo}
                   />
                 </div>
-                <h3 className={styles.workTitle}>Anthem</h3>
-                <p className={styles.workMeta}>Universal Audio · Musical Instrument Software</p>
+                {/* <h3 className={styles.workTitle}>Anthem Analog Synthesizer</h3> */}
+                {/* <p className={styles.workMeta}>Universal Audio · Musical Instrument Software</p> */}
               </div>
 
               <div className={styles.workGridItem}>
                 <div className={styles.workVideoWrap}>
                   <iframe
                     src="https://www.youtube.com/embed/uv8z3IAVPto"
-                    title="Apollo 16"
+                    title="Apollo 16 Audio Interface"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className={styles.workVideo}
                   />
                 </div>
-                <h3 className={styles.workTitle}>Apollo 16</h3>
-                <p className={styles.workMeta}>Universal Audio · TEC Award 2014 · Computer Audio Hardware</p>
+                {/* <h3 className={styles.workTitle}>Apollo 16 Audio Interface</h3> */}
+                {/* <p className={styles.workMeta}>Universal Audio · TEC Award 2014 · Computer Audio Hardware</p> */}
               </div>
 
-            </div>
-
-            <div className={styles.awardsBlock}>
-              <p className={styles.awardsLabel}>Industry Awards</p>
-              <div className={styles.awardsList}>
-                <div className={styles.awardRow}>
-                  <span className={styles.awardYear}>2023</span>
-                  <span>TEC Award — Opal Morphing Synthesizer · Musical Instrument Software</span>
-                </div>
-                <div className={styles.awardRow}>
-                  <span className={styles.awardYear}>2017</span>
-                  <span>TEC Award — Apollo Twin USB · Computer Audio Hardware</span>
-                </div>
-                <div className={styles.awardRow}>
-                  <span className={styles.awardYear}>2015</span>
-                  <span>TEC Award — Apollo Twin · Computer Audio Hardware</span>
-                </div>
-                <div className={styles.awardRow}>
-                  <span className={styles.awardYear}>2014</span>
-                  <span>TEC Award — Apollo 16 · Computer Audio Hardware</span>
-                </div>
-              </div>
             </div>
 
           </div>
         </section>
+        </section>
+
+        {/* ─── Awards ───────────────────────────────────────── */}
+        <section id="awards" className={styles.section}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionHeader}>INDUSTRY AWARDS</h2>
+            <hr className={styles.rule} />
+            <div className={styles.awardsList}>
+              <div className={styles.awardRow}>
+                <span className={styles.awardYear}>2023</span>
+                <span>TEC Award — <strong>Opal Morphing Synthesizer</strong> · Musical Instrument Software</span>
+              </div>
+              <div className={styles.awardRow}>
+                <span className={styles.awardYear}>2017</span>
+                <span>TEC Award — <strong>Apollo Twin USB</strong> · Computer Audio Hardware</span>
+              </div>
+              <div className={styles.awardRow}>
+                <span className={styles.awardYear}>2015</span>
+                <span>TEC Award — <strong>Apollo Twin</strong> · Computer Audio Hardware</span>
+              </div>
+              <div className={styles.awardRow}>
+                <span className={styles.awardYear}>2014</span>
+                <span>TEC Award — <strong>Apollo 16</strong> · Computer Audio Hardware</span>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* ─── Experience ───────────────────────────────────── */}
@@ -320,6 +324,8 @@ export default function Home() {
             <hr className={styles.rule} />
             <div className={styles.credentialItems}>
 
+              <p className={styles.credentialSubhead}>CERTIFICATIONS</p>
+
               <div className={styles.credentialRow}>
                 <span className={styles.credentialName}>AI Leadership &amp; Strategy</span>
                 <span className={styles.credentialOrg}>Vanderbilt University / Coursera · 2026</span>
@@ -335,9 +341,16 @@ export default function Home() {
                 <span className={styles.credentialOrg}>Scrum Alliance</span>
               </div>
 
+              <p className={styles.credentialSubhead}>EDUCATION</p>
+
               <div className={styles.credentialRow}>
-                <span className={styles.credentialName}>BFA</span>
-                <span className={styles.credentialOrg}>School of the Art Institute of Chicago</span>
+                <span className={styles.credentialName}>School of the Art Institute of Chicago</span>
+                <span className={styles.credentialOrg}>Fine Arts: Painting</span>
+              </div>
+
+              <div className={styles.credentialRow}>
+                <span className={styles.credentialName}>Paier College of Art</span>
+                <span className={styles.credentialOrg}>Fine Arts</span>
               </div>
 
             </div>

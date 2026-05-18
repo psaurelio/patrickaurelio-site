@@ -49,7 +49,7 @@
 
 /* ─── Dark mode ─────────────────────────────────────────────────── */
 [data-theme="dark"] {
-  --color-bg:     #1a1a18;
+  --color-bg:     #10100f;
   --color-fg:     #f0efeb;
   --color-muted:  #8a8a86;
   --color-accent: #f0efeb;
