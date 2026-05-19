@@ -18,7 +18,6 @@ export default function Home() {
   const [active, setActive] = useState("about");
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -37,7 +36,6 @@ export default function Home() {
     els.forEach((el) => observer.observe(el));
 
     const onScroll = () => {
-      setScrolled(window.scrollY > 0);
       if (window.scrollY < 80) {
         setActive("about");
       } else if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 80) {
@@ -55,7 +53,7 @@ export default function Home() {
   return (
     <>
       {/* ─── Nav ──────────────────────────────────────────────── */}
-      <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ""}`}>
+      <nav className={styles.nav}>
         <div className={styles.navInner}>
           {/* Mobile hamburger — left side */}
           <button
