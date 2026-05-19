@@ -68,25 +68,26 @@
 
 /* ─── Section base ───────────────────────────────────────────────── */
 .section {
-  padding: 48px 0;
+  padding: 10px 0 48px;
 }
 
 .sectionHeader {
   font-size: var(--type-xl);
-  font-weight: var(--weight-extralight);
+  font-weight: var(--weight-light);
   letter-spacing: -0.01em;
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .rule {
   border: none;
   border-top: 1px solid var(--color-rule);
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
-.ruleTight {
-  margin-bottom: 24px;
+
+.sectionRaised {
+  padding-top: 26px;
 }
 
 /* ─── Hero ───────────────────────────────────────────────────────── */
@@ -107,7 +108,7 @@
 }
 
 .headshot {
-  width: 312px;
+  width: 277px;
   height: 312px;
   border-radius: 16px;
   object-fit: cover;
@@ -133,7 +134,6 @@
 }
 
 .summary {
-  max-width: var(--measure);
   font-size: var(--body-size);
   font-weight: var(--body-weight);
   line-height: var(--body-line-height);
@@ -418,8 +418,10 @@
 }
 
 .contactLink {
-  font-size: var(--type-base);
-  font-weight: var(--weight-extralight);
+  font-size: var(--body-size);
+  font-weight: var(--weight-regular);
+  line-height: var(--body-line-height);
+  color: var(--color-fg);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: var(--color-rule);
@@ -428,6 +430,14 @@
 
 .contactLink:hover {
   text-decoration-color: var(--color-fg);
+}
+
+.contactLocation {
+  margin-top: 36px;
+  font-size: var(--body-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--body-line-height);
+  color: var(--color-fg);
 }
 
 /* ─── Footer ─────────────────────────────────────────────────────── */

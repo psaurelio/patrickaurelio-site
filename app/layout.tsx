@@ -19,6 +19,14 @@ export const metadata: Metadata = {
     siteName: "Patrick Aurelio",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://patrickaurelio.com/images/thumbnail_v1.png",
+        width: 1180,
+        height: 630,
+        alt: "Patrick Aurelio — Product Leadership & Design",
+      },
+    ],
   },
 };
 

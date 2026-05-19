@@ -96,7 +96,7 @@ export default function Home() {
               <Image
                 src="/images/headshot_11-2026.jpeg"
                 alt="Patrick Aurelio"
-                width={312}
+                width={277}
                 height={312}
                 className={styles.headshot}
                 priority
@@ -108,7 +108,7 @@ export default function Home() {
         <section id="work" className={`${styles.section} ${styles.sectionRaised}`}>
           <div className={styles.container}>
             <h2 className={styles.sectionHeader}>SELECTED WORK</h2>
-            <hr className={`${styles.rule} ${styles.ruleTight}`} />
+            <hr className={styles.rule} />
 
             <div className={styles.workGrid}>
 
@@ -362,9 +362,6 @@ export default function Home() {
           <div className={styles.container}>
             <h2 className={styles.sectionHeader}>CONTACT</h2>
             <hr className={styles.rule} />
-            <p className={styles.contactIntro}>
-              Open to conversations about the right opportunity.
-            </p>
             <div className={styles.contactLinks}>
               <a href="mailto:psaurelio@icloud.com" className={styles.contactLink}>
                 psaurelio@icloud.com
@@ -375,7 +372,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className={styles.contactLink}
               >
-                linkedin.com/in/patrickaurelio
+                linkedin.com/patrickaurelio
               </a>
               <a
                 href="/docs/resume-04-2026.pdf"
@@ -385,6 +382,9 @@ export default function Home() {
                 Download Résumé
               </a>
             </div>
+            <p className={styles.contactLocation}>
+              Currently located in Pittsburgh, PA, USA · Willing to relocate for the right opportunity.
+            </p>
           </div>
         </section>
       </main>
