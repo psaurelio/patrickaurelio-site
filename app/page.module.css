@@ -11,16 +11,18 @@
   top: 0;
   z-index: 100;
   background-color: var(--color-bg);
-  border-bottom: 1px solid var(--color-rule);
   min-height: var(--nav-height);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+
 .navInner {
   padding: 0 24px;
   width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
   height: var(--nav-height);
   display: flex;
   align-items: center;
@@ -71,7 +73,7 @@
 
 /* ─── Section base ───────────────────────────────────────────────── */
 .section {
-  padding: 10px 0 48px;
+  padding: 10px 0 84px;
 }
 
 .sectionHeader {
@@ -90,12 +92,12 @@
 
 
 .sectionRaised {
-  padding-top: 26px;
+  padding-top: 25px;
 }
 
 /* ─── Hero ───────────────────────────────────────────────────────── */
 .hero {
-  padding: 56px 0 0;
+  padding: 40px 0 0;
 }
 
 .heroTop {
@@ -141,6 +143,10 @@
   line-height: var(--body-line-height);
   color: var(--color-fg);
   margin-bottom: 0px;
+}
+
+.summaryMiddle {
+  display: inline;
 }
 
 .availability {
@@ -434,9 +440,9 @@
 .contactLocation {
   margin-top: 36px;
   font-size: var(--body-size);
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-extralight);
   line-height: var(--body-line-height);
-  color: var(--color-fg);
+  color: var(--color-muted);
 }
 
 /* ─── Footer ─────────────────────────────────────────────────────── */
@@ -467,7 +473,6 @@
   border: none;
   cursor: pointer;
   padding: 4px;
-  margin-left: auto;
 }
 
 .hamburgerBar {
@@ -519,7 +524,38 @@
   color: var(--color-fg);
 }
 
-/* ─── Responsive ─────────────────────────────────────────────────── */
+/* ─── Nav breakpoint (hamburger) ────────────────────────────────── */
+@media (max-width: 1024px) {
+  /* Show hamburger, hide desktop links */
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
+
+  .navLink {
+    display: none;
+  }
+
+  /* Compact nav */
+  .nav {
+    min-height: 44px;
+  }
+
+  .navInner {
+    height: 44px;
+    justify-content: flex-start;
+  }
+
+  /* Single-column video grid */
+  .workGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Mobile breakpoint (content) ───────────────────────────────── */
 @media (max-width: 600px) {
   .name {
     font-size: var(--type-xl);
@@ -534,25 +570,8 @@
     height: 64px;
   }
 
-  .navInner {
-    gap: 20px;
-  }
-
-  /* Single-column video grid */
-  .workGrid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Show hamburger, hide desktop links */
-  .hamburger {
-    display: flex;
-  }
-
-  .mobileMenu {
-    display: flex;
-  }
-
-  .navLink {
+  /* Thin hero summary to first + last sentence only */
+  .summaryMiddle {
     display: none;
   }
 

@@ -18,6 +18,7 @@ export default function Home() {
   const [active, setActive] = useState("about");
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -36,6 +37,7 @@ export default function Home() {
     els.forEach((el) => observer.observe(el));
 
     const onScroll = () => {
+      setScrolled(window.scrollY > 0);
       if (window.scrollY < 80) {
         setActive("about");
       } else if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 80) {
@@ -53,8 +55,20 @@ export default function Home() {
   return (
     <>
       {/* ─── Nav ──────────────────────────────────────────────── */}
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ""}`}>
         <div className={styles.navInner}>
+          {/* Mobile hamburger — left side */}
+          <button
+            className={styles.hamburger}
+            onClick={() => setMenuOpen(o => !o)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+          >
+            <span className={`${styles.hamburgerBar} ${menuOpen ? styles.hamburgerBarOpen1 : ""}`} />
+            <span className={`${styles.hamburgerBar} ${menuOpen ? styles.hamburgerBarOpen2 : ""}`} />
+            <span className={`${styles.hamburgerBar} ${menuOpen ? styles.hamburgerBarOpen3 : ""}`} />
+          </button>
+
           {/* Desktop links */}
           {NAV.map(({ id, label }) => (
             <a
@@ -73,18 +87,6 @@ export default function Home() {
           >
             Résumé ⤓
           </a>
-
-          {/* Mobile hamburger */}
-          <button
-            className={styles.hamburger}
-            onClick={() => setMenuOpen(o => !o)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-          >
-            <span className={`${styles.hamburgerBar} ${menuOpen ? styles.hamburgerBarOpen1 : ""}`} />
-            <span className={`${styles.hamburgerBar} ${menuOpen ? styles.hamburgerBarOpen2 : ""}`} />
-            <span className={`${styles.hamburgerBar} ${menuOpen ? styles.hamburgerBarOpen3 : ""}`} />
-          </button>
         </div>
 
         {/* Mobile dropdown */}
@@ -119,17 +121,14 @@ export default function Home() {
             <div className={styles.heroTop}>
               <div className={styles.heroNames}>
                 <h1 className={styles.name}>PATRICK AURELIO</h1>
-                <p className={styles.role}>PRODUCT LEADERSHIP AND DESIGN | 4x TEC AWARD-WINNING PRODUCTS </p>
+                <p className={styles.role}>PRODUCT LEADERSHIP AND DESIGN | 4x TEC AWARD-WINNING PRODUCTS</p>
                 <p className={styles.summary}>
-              Innovative product professional with 12+ years shaping
-              award-winning software and hardware products. Expert in end-to-end product lifecycle
-              leadership, from strategy, roadmap planning, and backlog orchestration to hands-on UX
-              design leadership and technical collaboration with DSP / algorithm engineers. Known for
-              driving industry-recognized launches and delivering user-centric workflows validated through rigorous user
-              research. Adept at balancing feature innovation with technical debt and platform
-              stability while influencing cross-functional stakeholders across design, engineering,
-              and GTM teams. Available for employment, long and short-term contracts, and consulting.
-            </p>
+                  Innovative product professional with 12+ years shaping award-winning software and hardware products.{" "}
+                  <span className={styles.summaryMiddle}>
+                    Expert in end-to-end product lifecycle leadership, from strategy, roadmap planning, and backlog orchestration to hands-on UX design leadership and technical collaboration with DSP / algorithm engineers. Known for driving industry-recognized launches and delivering user-centric workflows validated through rigorous user research. Adept at balancing feature innovation with technical debt and platform stability while influencing cross-functional stakeholders across design, engineering, and GTM teams.{" "}
+                  </span>
+                  Available for employment, long and short-term contracts, and consulting.
+                </p>
               </div>
               <Image
                 src="/images/headshot_11-2026.jpeg"
