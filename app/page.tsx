@@ -17,6 +17,7 @@ const NAV = [
 export default function Home() {
   const [active, setActive] = useState("about");
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -54,6 +55,7 @@ export default function Home() {
       {/* ─── Nav ──────────────────────────────────────────────── */}
       <nav className={styles.nav}>
         <div className={styles.navInner}>
+          {/* Desktop links */}
           {NAV.map(({ id, label }) => (
             <a
               key={id}
@@ -71,7 +73,43 @@ export default function Home() {
           >
             Résumé ⤓
           </a>
+
+          {/* Mobile hamburger */}
+          <button
+            className={styles.hamburger}
+            onClick={() => setMenuOpen(o => !o)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+          >
+            <span className={`${styles.hamburgerBar} ${menuOpen ? styles.hamburgerBarOpen1 : ""}`} />
+            <span className={`${styles.hamburgerBar} ${menuOpen ? styles.hamburgerBarOpen2 : ""}`} />
+            <span className={`${styles.hamburgerBar} ${menuOpen ? styles.hamburgerBarOpen3 : ""}`} />
+          </button>
         </div>
+
+        {/* Mobile dropdown */}
+        {menuOpen && (
+          <div className={styles.mobileMenu}>
+            {NAV.map(({ id, label }) => (
+              <a
+                key={id}
+                href={`#${id}`}
+                className={`${styles.mobileMenuLink} ${active === id ? styles.mobileMenuLinkActive : ""}`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </a>
+            ))}
+            <a
+              href="/docs/resume-04-2026.pdf"
+              download
+              className={styles.mobileMenuLink}
+              onClick={() => setMenuOpen(false)}
+            >
+              Résumé ⤓
+            </a>
+          </div>
+        )}
       </nav>
 
       <main>
@@ -104,7 +142,9 @@ export default function Home() {
             </div>
             
           </div>
-                 {/* ─── Selected Work ────────────────────────────────── */}
+        </section>
+
+        {/* ─── Selected Work ────────────────────────────────── */}
         <section id="work" className={`${styles.section} ${styles.sectionRaised}`}>
           <div className={styles.container}>
             <h2 className={styles.sectionHeader}>SELECTED WORK</h2>
@@ -171,7 +211,6 @@ export default function Home() {
             </div>
 
           </div>
-        </section>
         </section>
 
         {/* ─── Awards ───────────────────────────────────────── */}
@@ -372,7 +411,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className={styles.contactLink}
               >
-                linkedin.com/patrickaurelio
+                linkedin.com/in/patrickaurelio
               </a>
               <a
                 href="/docs/resume-04-2026.pdf"
