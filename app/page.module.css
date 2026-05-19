@@ -321,9 +321,9 @@
 .contactLocation {
   margin-top: 36px;
   font-size: var(--body-size);
-  font-weight: var(--weight-extralight);
+  font-weight: var(--body-weight);
   line-height: var(--body-line-height);
-  color: var(--color-muted);
+  color: var(--color-fg);
 }
 
 /* ─── Footer ─────────────────────────────────────────────────────── */
